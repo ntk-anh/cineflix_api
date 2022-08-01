@@ -1,6 +1,7 @@
 package com.cybersoft.cineflix_api.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,12 @@ public class PhimService implements PhimServiceImp {
 	@Override
 	public List<Phim> getAllPhim() {
 		return phimRepository.findAll();
+	}
+
+
+	@Override
+	public List<Map<String, ?>> getPhimByQuocGia(Integer id) {
+		return phimRepository.getPhimByQuocGia(id);
 	}
 
 }
