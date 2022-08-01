@@ -9,6 +9,9 @@ import com.cybersoft.cineflix_api.entity.Phim;
 
 public interface PhimServiceImp {
 
+	/*
 	 List<Phim> getAllPhim();
-	 List<Map<String, ?>> getPhimByQuocGia(Integer id);
+	 */
+	List<Map<String, ?>> getAllPhim();
+	List<Map<String, ?>> getPhimByQuocGia(Integer id);
 }

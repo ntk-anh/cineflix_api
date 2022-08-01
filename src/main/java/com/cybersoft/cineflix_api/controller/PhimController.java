@@ -21,9 +21,16 @@ public class PhimController {
 	@Autowired
 	PhimServiceImp phimServiceImp;
 	
+	/*
 	@GetMapping("")
 	public ResponseEntity<?> getAllPhim(){
 		return new ResponseEntity<List<Phim>>(phimServiceImp.getAllPhim(),HttpStatus.OK);
+	}
+	*/
+	
+	@GetMapping("")
+	public ResponseEntity<?> getAllPhim(){
+		return new ResponseEntity<List<Map<String, ?>>>(phimServiceImp.getAllPhim(),HttpStatus.OK);
 	}
 	
 	@GetMapping("/{id_quocgia}")
@@ -35,4 +42,10 @@ public class PhimController {
 		}
 		return new ResponseEntity<List<Map<String, ?>>>(list,HttpStatus.OK);
 	}
+	
+	
 }
+/*
+* thực hiện câu query lấy danh sách phim và toàn bộ loại "của từng phim"
+* viết bằng procedured
+*/

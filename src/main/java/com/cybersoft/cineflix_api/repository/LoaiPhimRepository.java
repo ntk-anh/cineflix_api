@@ -9,4 +9,5 @@ import com.cybersoft.cineflix_api.entity.LoaiPhim;
 public interface LoaiPhimRepository extends JpaRepository<LoaiPhim, Integer> {
 
 	
+	
 }
